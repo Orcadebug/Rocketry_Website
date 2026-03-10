@@ -1,8 +1,13 @@
+"use client";
+
 import RocketScroll from "@/components/RocketScroll";
 import TeamShowcase from "@/components/ui/team-showcase";
 import { Rocket, Target, Users, Map, DollarSign, Award, ArrowRight, MessageSquare, Instagram, Mail } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("Home");
+
   return (
     <main className="min-h-screen text-zinc-300">
       {/* Floating Island Navigation Bar */}
@@ -30,10 +35,19 @@ export default function Home() {
 
         {/* Core Navigation (White Pill) */}
         <nav className="hidden md:flex items-center bg-white p-1 rounded-full text-sm font-medium shadow-md">
-          <a href="#" className="px-5 py-1.5 bg-black text-white rounded-full transition-all">Home</a>
-          <a href="#about" className="px-5 py-1.5 text-zinc-900 rounded-full hover:bg-zinc-100 transition-all">About</a>
-          <a href="#projects" className="px-5 py-1.5 text-zinc-900 rounded-full hover:bg-zinc-100 transition-all">Projects</a>
-          <a href="#leadership" className="px-5 py-1.5 text-zinc-900 rounded-full hover:bg-zinc-100 transition-all">Leadership</a>
+          {["Home", "About", "Projects", "Leadership"].map((tab) => (
+            <a
+              key={tab}
+              href={tab === "Home" ? "#" : `#${tab.toLowerCase()}`}
+              onClick={() => setActiveTab(tab)}
+              className={`px-5 py-1.5 rounded-full transition-all ${activeTab === tab
+                  ? "bg-black text-white"
+                  : "text-zinc-900 hover:bg-zinc-100"
+                }`}
+            >
+              {tab}
+            </a>
+          ))}
         </nav>
       </div>
 
