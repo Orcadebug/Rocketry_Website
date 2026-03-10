@@ -16,7 +16,7 @@ export default function Home() {
         {/* Logo and Brand */}
         <div className="flex items-center gap-4">
           <div className="flex-shrink-0">
-            <img src="/new-logo-2.png" alt="Buckeye Rocketry" className="h-[3.25rem] w-auto -my-1" />
+            <img src="/new-logo-3.png" alt="Buckeye Rocketry" className="h-[3.25rem] w-auto -my-1" />
           </div>
           <div className="hidden sm:block w-[1px] h-8 bg-zinc-800"></div>
           <div className="hidden sm:flex flex-col justify-center">
