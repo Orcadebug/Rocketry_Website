@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, ReactNode } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, motion } from "framer-motion";
 
 const TOTAL_FRAMES = 279;
 
@@ -112,13 +112,9 @@ export default function RocketScroll({ children }: RocketScrollProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, [globalScroll]);
 
-  // Adjust timing windows for the 400vh hero section using heroScroll
-  const opacity1 = useTransform(heroScroll, [0, 0.15, 0.3], [1, 1, 0]);
-  const y1 = useTransform(heroScroll, [0, 0.3], [0, -40]);
-
-  const opacity2 = useTransform(heroScroll, [0.15, 0.3, 0.45, 0.6], [0, 1, 1, 0]);
-  const opacity3 = useTransform(heroScroll, [0.45, 0.6, 0.75, 0.9], [0, 1, 1, 0]);
-  const opacity5 = useTransform(heroScroll, [0.75, 0.9, 1], [0, 1, 1]); // Stays visible until end of hero
+  // Adjust timing windows for the hero section using heroScroll if needed later
+  // Currently unused since text elements were removed, but keeping the hook
+  // for potential future use with the navbar or other elements.
 
   return (
     <div className="relative w-full min-h-screen">
@@ -140,47 +136,10 @@ export default function RocketScroll({ children }: RocketScrollProps) {
         <div className="absolute inset-0 bg-black/40 bg-gradient-to-b from-transparent via-black/20 to-black/80" />
       </div>
 
-      {/* Hero Content Section - 400vh for scrollytelling */}
-      <div ref={heroRef} className="relative z-10 w-full" style={{ height: "400vh" }}>
+      {/* Hero Content Section - Reduced scroll height since there's no text */}
+      <div ref={heroRef} className="relative z-10 w-full" style={{ height: "150vh" }}>
         <div className="sticky top-0 h-screen w-full flex items-center justify-center pointer-events-none">
-
-          <div className="absolute inset-0 w-full h-full max-w-7xl mx-auto">
-            <motion.div
-              style={{ opacity: opacity1, y: y1 }}
-              className="absolute top-1/4 left-0 right-0 text-center flex flex-col items-center pointer-events-auto"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-red-500 mb-2 drop-shadow-md">Buckeye Rocketry</h1>
-              <p className="text-lg md:text-xl text-zinc-300 font-medium drop-shadow-sm">"Engineering flight at Ohio State."</p>
-            </motion.div>
-
-            <motion.div
-              style={{ opacity: opacity2 }}
-              className="absolute top-1/3 left-8 md:left-24 max-w-sm pointer-events-auto"
-            >
-              <h2 className="text-3xl md:text-4xl font-semibold mb-2 text-red-500 drop-shadow-md">Student Built</h2>
-              <p className="text-lg text-zinc-300 leading-relaxed font-light drop-shadow-sm">"Rockets designed and built entirely by students."</p>
-            </motion.div>
-
-            <motion.div
-              style={{ opacity: opacity3 }}
-              className="absolute top-1/3 right-8 md:right-24 max-w-sm text-right pointer-events-auto"
-            >
-              <h2 className="text-3xl md:text-4xl font-semibold mb-2 text-red-500 drop-shadow-md">Systems Engineering</h2>
-              <p className="text-lg text-zinc-300 leading-relaxed font-light drop-shadow-sm">"Avionics. Propulsion. Structures."</p>
-            </motion.div>
-
-            <motion.div
-              style={{ opacity: opacity5 }}
-              className="absolute top-1/3 left-0 right-0 text-center flex flex-col items-center pointer-events-auto"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-red-500 drop-shadow-md">Join Buckeye Rocketry</h2>
-              <p className="text-lg text-zinc-300 font-medium mb-8 drop-shadow-sm">"Build the future of aerospace."</p>
-              <div className="flex gap-4">
-                <a href="#join" className="px-8 py-3 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20">Join Us</a>
-                <a href="#sponsor" className="px-8 py-3 bg-zinc-900/80 text-white border border-white/10 backdrop-blur-md rounded-full font-medium hover:bg-zinc-800 transition-colors shadow-md">Sponsor Us</a>
-              </div>
-            </motion.div>
-          </div>
+          {/* 3D rocket animation handles visual interest here */}
         </div>
       </div>
 

@@ -6,21 +6,36 @@ export default function Home() {
     <main className="min-h-screen text-zinc-300">
       {/* Hero / Scrollytelling Section wrapping the entire page content */}
       <RocketScroll>
-        {/* Navigation Bar (appears after scroll) */}
-        <div className="sticky top-0 z-50 bg-black/50 backdrop-blur-md border-b border-white/5">
-          <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div className="font-bold text-xl tracking-tight text-red-500 flex items-center gap-2">
-              <Rocket className="w-5 h-5" />
-              <span>BR</span>
+        {/* Floating Island Navigation Bar */}
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-11/12 max-w-6xl bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl flex items-center justify-between p-2 pl-6">
+
+          {/* Logo and Brand */}
+          <div className="flex items-center gap-4">
+            <div className="text-red-500 rounded-full">
+              <Rocket className="w-6 h-6" />
             </div>
-            <nav className="hidden md:flex gap-8 text-zinc-400 font-medium text-sm">
-              <a href="#about" className="hover:text-red-400 transition-colors drop-shadow-md">About</a>
-              <a href="#projects" className="hover:text-red-400 transition-colors drop-shadow-md">Projects</a>
-              <a href="#leadership" className="hover:text-red-400 transition-colors drop-shadow-md">Leadership</a>
-              <a href="#sponsor" className="hover:text-red-400 transition-colors drop-shadow-md">Sponsor</a>
-              <a href="#join" className="hover:text-red-400 transition-colors drop-shadow-md">Join</a>
-            </nav>
+            <div className="hidden sm:block w-[1px] h-8 bg-zinc-800"></div>
+            <div className="hidden sm:flex flex-col justify-center">
+              <span className="text-zinc-500 text-[10px] font-medium uppercase tracking-wider">Since 2026</span>
+              <span className="font-semibold tracking-tight text-white text-sm">Buckeye Rocketry</span>
+            </div>
           </div>
+
+          {/* Secondary Actions (Like Porsche's "01 My order") */}
+          <div className="hidden lg:flex items-center bg-[#18181b] border border-white/5 rounded-full p-1 pl-1 pr-6 hover:bg-[#27272a] transition-colors cursor-pointer group">
+            <div className="flex items-center justify-center bg-black border border-white/5 text-white px-3 py-1.5 rounded-full group-hover:border-zinc-700 transition-colors">
+              <Users className="w-3.5 h-3.5" />
+            </div>
+            <a href="#join" className="ml-3 text-sm text-zinc-400 font-medium group-hover:text-white transition-colors">Join Us</a>
+          </div>
+
+          {/* Core Navigation (White Pill) */}
+          <nav className="hidden md:flex items-center bg-white p-1 rounded-full text-sm font-medium shadow-md">
+            <a href="#" className="px-5 py-1.5 bg-black text-white rounded-full transition-all">Home</a>
+            <a href="#about" className="px-5 py-1.5 text-zinc-900 rounded-full hover:bg-zinc-100 transition-all">About</a>
+            <a href="#projects" className="px-5 py-1.5 text-zinc-900 rounded-full hover:bg-zinc-100 transition-all">Projects</a>
+            <a href="#leadership" className="px-5 py-1.5 text-zinc-900 rounded-full hover:bg-zinc-100 transition-all">Leadership</a>
+          </nav>
         </div>
 
         {/* Content Sections */}
