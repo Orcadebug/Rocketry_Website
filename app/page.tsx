@@ -15,8 +15,8 @@ export default function Home() {
 
         {/* Logo and Brand */}
         <div className="flex items-center gap-4">
-          <div className="text-red-500 rounded-full">
-            <Rocket className="w-6 h-6" />
+          <div className="flex-shrink-0">
+            <img src="/block-o.svg" alt="Ohio State Block O" className="w-6 h-auto" />
           </div>
           <div className="hidden sm:block w-[1px] h-8 bg-zinc-800"></div>
           <div className="hidden sm:flex flex-col justify-center">
@@ -41,8 +41,8 @@ export default function Home() {
               href={tab === "Home" ? "#" : `#${tab.toLowerCase()}`}
               onClick={() => setActiveTab(tab)}
               className={`px-5 py-1.5 rounded-full transition-all ${activeTab === tab
-                  ? "bg-black text-white"
-                  : "text-zinc-900 hover:bg-zinc-100"
+                ? "bg-black text-white"
+                : "text-zinc-900 hover:bg-zinc-100"
                 }`}
             >
               {tab}
