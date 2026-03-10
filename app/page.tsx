@@ -24,14 +24,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Secondary Actions (Like Porsche's "01 My order") */}
-        <div className="hidden lg:flex items-center bg-[#18181b] border border-white/5 rounded-full p-1 pl-1 pr-6 hover:bg-[#27272a] transition-colors cursor-pointer group">
-          <div className="flex items-center justify-center bg-black border border-white/5 text-white px-3 py-1.5 rounded-full group-hover:border-zinc-700 transition-colors">
-            <Users className="w-3.5 h-3.5" />
-          </div>
-          <a href="#join" className="ml-3 text-sm text-zinc-400 font-medium group-hover:text-white transition-colors">Join Us</a>
-        </div>
-
         {/* Core Navigation (White Pill) */}
         <nav className="hidden md:flex items-center bg-white p-1 rounded-full text-sm font-medium shadow-md">
           {["Home", "About", "Projects", "Leadership"].map((tab) => (
