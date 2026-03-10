@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <main className="min-h-screen text-zinc-300">
       {/* Floating Island Navigation Bar */}
-      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-11/12 max-w-6xl bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl flex items-center justify-between p-2 pl-6">
+      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-11/12 max-w-6xl bg-[#0a0a0a]/90  border border-white/10 rounded-full shadow-2xl flex items-center justify-between p-2 pl-6">
 
         {/* Logo and Brand */}
         <div className="flex items-center gap-4">
           <div className="flex-shrink-0">
-            <img src="/new-logo.png" alt="Buckeye Rocketry" className="h-[3.25rem] w-auto -my-1" />
+            <img src="/new-logo-2.png" alt="Buckeye Rocketry" className="h-[3.25rem] w-auto -my-1" />
           </div>
           <div className="hidden sm:block w-[1px] h-8 bg-zinc-800"></div>
           <div className="hidden sm:flex flex-col justify-center">
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="space-y-16 mt-12">
               <div>
                 <h4 className="text-2xl font-medium mb-4 text-red-400 drop-shadow-sm">Current Projects</h4>
-                <div className="bg-black/60 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-lg hover:border-red-500/50 transition-colors">
+                <div className="bg-black/60  rounded-2xl p-8 border border-white/10 shadow-lg hover:border-red-500/50 transition-colors">
                   <h5 className="font-semibold text-lg mb-2 text-zinc-100">Project Artemis (2026)</h5>
                   <p className="text-zinc-300">
                     Our current active development focuses on a two-stage high-altitude vehicle aiming for 30,000 feet at the Spaceport America Cup. Featuring an active drag system and custom flight computer.
@@ -93,13 +93,13 @@ export default function Home() {
               <div>
                 <h4 className="text-2xl font-medium mb-4 text-red-400 drop-shadow-sm">Past Projects</h4>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-black/60 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-lg hover:border-red-500/50 transition-colors">
+                  <div className="bg-black/60  rounded-2xl p-8 border border-white/10 shadow-lg hover:border-red-500/50 transition-colors">
                     <h5 className="font-semibold text-lg mb-2 text-zinc-100">Project Zenith (2025)</h5>
                     <p className="text-zinc-300 text-sm">
                       Reaching 10,000 feet with a student-researched and mixed solid propellant motor. Awarded technical excellence for avionics recovery system.
                     </p>
                   </div>
-                  <div className="bg-black/60 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-lg hover:border-red-500/50 transition-colors">
+                  <div className="bg-black/60  rounded-2xl p-8 border border-white/10 shadow-lg hover:border-red-500/50 transition-colors">
                     <h5 className="font-semibold text-lg mb-2 text-zinc-100">Project Icarus (2024)</h5>
                     <p className="text-zinc-300 text-sm">
                       First successful dual-deployment recovery system integration, laying the groundwork for complex flight profiles.
@@ -118,7 +118,7 @@ export default function Home() {
             </div>
             <h3 className="text-4xl font-semibold mb-12 text-red-500 tracking-tight drop-shadow-md">The team behind the hardware.</h3>
 
-            <div className="bg-black/40 backdrop-blur-sm pt-8 rounded-3xl border border-white/5 shadow-2xl overflow-hidden">
+            <div className="bg-black/40  pt-8 rounded-3xl border border-white/5 shadow-2xl overflow-hidden">
               <TeamShowcase />
             </div>
           </section>
@@ -135,7 +135,7 @@ export default function Home() {
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg text-center hover:border-red-500/50 transition-colors">
+              <div className="bg-black/60  p-6 rounded-2xl border border-white/10 shadow-lg text-center hover:border-red-500/50 transition-colors">
                 <h4 className="font-semibold text-lg mb-1 text-zinc-100">Bronze</h4>
                 <div className="text-red-400 text-sm mb-4">$500+</div>
                 <ul className="text-sm text-zinc-300 space-y-2 text-left">
@@ -143,7 +143,7 @@ export default function Home() {
                   <li>• Social media shoutout</li>
                 </ul>
               </div>
-              <div className="bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg text-center relative overflow-hidden hover:border-red-500/50 transition-colors">
+              <div className="bg-black/60  p-6 rounded-2xl border border-white/10 shadow-lg text-center relative overflow-hidden hover:border-red-500/50 transition-colors">
                 <div className="absolute top-0 inset-x-0 h-1 bg-red-600"></div>
                 <h4 className="font-semibold text-lg mb-1 text-zinc-100">Silver</h4>
                 <div className="text-red-400 text-sm mb-4">$1,000+</div>
@@ -153,7 +153,7 @@ export default function Home() {
                   <li>• Bronze benefits</li>
                 </ul>
               </div>
-              <div className="bg-red-950/50 backdrop-blur-md text-white p-6 rounded-2xl shadow-xl text-center border border-red-500/50 relative overflow-hidden">
+              <div className="bg-red-950/50  text-white p-6 rounded-2xl shadow-xl text-center border border-red-500/50 relative overflow-hidden">
                 <div className="absolute top-0 inset-x-0 h-1 bg-red-500"></div>
                 <Award className="absolute -bottom-4 -right-4 w-24 h-24 text-red-500/20" />
                 <h4 className="font-semibold text-lg mb-1 drop-shadow-sm">Gold</h4>
@@ -166,7 +166,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-black/60 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-lg">
+            <div className="bg-black/60  rounded-2xl p-8 border border-white/10 shadow-lg">
               <h4 className="font-medium text-xl mb-4 text-zinc-100 drop-shadow-sm">Become a Sponsor</h4>
               <form className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -202,11 +202,11 @@ export default function Home() {
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </a>
               <div className="flex-1 flex gap-4">
-                <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-black/60 backdrop-blur-md border border-white/10 rounded-xl hover:bg-black/80 hover:border-white/20 transition-colors text-zinc-200 font-medium shadow-md">
+                <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-black/60  border border-white/10 rounded-xl hover:bg-black/80 hover:border-white/20 transition-colors text-zinc-200 font-medium shadow-md">
                   <MessageSquare className="w-5 h-5" />
                   Messenger Group
                 </a>
-                <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-black/60 backdrop-blur-md border border-white/10 rounded-xl hover:bg-black/80 hover:border-white/20 transition-colors text-zinc-200 font-medium shadow-md">
+                <a href="#" className="flex-1 flex items-center justify-center gap-2 bg-black/60  border border-white/10 rounded-xl hover:bg-black/80 hover:border-white/20 transition-colors text-zinc-200 font-medium shadow-md">
                   <Instagram className="w-5 h-5" />
                   Instagram
                 </a>
@@ -216,7 +216,7 @@ export default function Home() {
 
         </div>
 
-        <footer className="w-full border-t border-white/10 bg-black/80 backdrop-blur-md py-8 text-center text-sm text-zinc-400 mt-12">
+        <footer className="w-full border-t border-white/10 bg-black/80  py-8 text-center text-sm text-zinc-400 mt-12">
           <p>© 2026 Buckeye Rocketry. At The Ohio State University.</p>
         </footer>
       </RocketScroll>
