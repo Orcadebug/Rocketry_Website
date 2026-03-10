@@ -144,7 +144,7 @@ export default function RocketScroll({ children }: RocketScrollProps) {
       </div>
 
       {/* Main Page Content rendered below hero */}
-      <div className="relative z-10 w-full bg-black/50 backdrop-blur-sm pb-24 border-t border-white/10">
+      <div className="relative z-10 w-full bg-black/50 pb-24 border-t border-white/10">
         {children}
       </div>
 

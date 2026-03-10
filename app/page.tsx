@@ -16,12 +16,11 @@ export default function Home() {
         {/* Logo and Brand */}
         <div className="flex items-center gap-4">
           <div className="flex-shrink-0">
-            <img src="/block-o.svg" alt="Ohio State Block O" className="w-6 h-auto" />
+            <img src="/new-logo.png" alt="Buckeye Rocketry" className="h-[3.25rem] w-auto -my-1" />
           </div>
           <div className="hidden sm:block w-[1px] h-8 bg-zinc-800"></div>
           <div className="hidden sm:flex flex-col justify-center">
             <span className="text-zinc-500 text-[10px] font-medium uppercase tracking-wider">Since 2026</span>
-            <span className="font-semibold tracking-tight text-white text-sm">Buckeye Rocketry</span>
           </div>
         </div>
 
