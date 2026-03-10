@@ -137,7 +137,7 @@ export default function RocketScroll({ children }: RocketScrollProps) {
       </div>
 
       {/* Hero Content Section - Reduced scroll height since there's no text */}
-      <div ref={heroRef} className="relative z-10 w-full" style={{ height: "150vh" }}>
+      <div ref={heroRef} className="relative z-10 w-full h-[100vh]">
         <div className="sticky top-0 h-screen w-full flex items-center justify-center pointer-events-none">
           {/* 3D rocket animation handles visual interest here */}
         </div>
