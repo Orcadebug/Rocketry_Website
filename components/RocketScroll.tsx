@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState, ReactNode } from "react";
-import { useScroll, motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 const TOTAL_FRAMES = 279;
 
 interface RocketScrollProps {
+  heroContent?: ReactNode;
   children?: ReactNode;
 }
 
-export default function RocketScroll({ children }: RocketScrollProps) {
+export default function RocketScroll({ heroContent, children }: RocketScrollProps) {
   const heroRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
@@ -18,12 +19,6 @@ export default function RocketScroll({ children }: RocketScrollProps) {
 
   // Global scroll for the 3D rocket canvas
   const { scrollYProgress: globalScroll } = useScroll();
-
-  // Local scroll specifically for the Hero section text
-  const { scrollYProgress: heroScroll } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
 
   useEffect(() => {
     let loadedCount = 0;
@@ -112,10 +107,6 @@ export default function RocketScroll({ children }: RocketScrollProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, [globalScroll]);
 
-  // Adjust timing windows for the hero section using heroScroll if needed later
-  // Currently unused since text elements were removed, but keeping the hook
-  // for potential future use with the navbar or other elements.
-
   return (
     <div className="relative w-full min-h-screen">
 
@@ -139,7 +130,11 @@ export default function RocketScroll({ children }: RocketScrollProps) {
       {/* Hero Content Section - Reduced scroll height since there's no text */}
       <div ref={heroRef} className="relative z-10 w-full h-[100vh]">
         <div className="sticky top-0 h-screen w-full flex items-center justify-center pointer-events-none">
-          {/* 3D rocket animation handles visual interest here */}
+          {heroContent ? (
+            <div className="w-full pointer-events-auto">
+              {heroContent}
+            </div>
+          ) : null}
         </div>
       </div>
 
